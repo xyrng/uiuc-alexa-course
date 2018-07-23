@@ -62,32 +62,9 @@
                 },
                 {
                     "name": "AnswerCourseDescriptionIntent",
+                    "slots": [],
                     "samples": [
                         "course description"
-                    ]
-                },
-                {
-                    "name": "AnswerSubjectIntent",
-                    "slots": [
-                        {
-                            "name": "subject",
-                            "type": "subject"
-                        }
-                    ],
-                    "samples": [
-                        "{subject}"
-                    ]
-                },
-                {
-                    "name": "AnswerCourseNumIntent",
-                    "slots": [
-                        {
-                            "name": "courseNum",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples": [
-                        "{courseNum}"
                     ]
                 },
                 {
@@ -111,6 +88,13 @@
                         "reopen",
                         "start again",
                         "restart"
+                    ]
+                },
+                {
+                    "name": "IntermediateIntent",
+                    "slots": [],
+                    "samples": [
+                        "go on"
                     ]
                 }
             ],

@@ -2,11 +2,12 @@ import json
 import urllib
 from urllib.request import urlopen
 from parse import parse
-from sets import Set
+
 
 course_url = "https://courses.illinois.edu/cisapp/explorer/schedule"
 
-subject = Set([])
+unreadable_subjects_title = {"CS", "ECE"}
+unreadable_section_title = {"AL1", "AL2", }
 
 #########################  BASIC FEATURE  ##################################
 def make_prelink(year, semester, subject, courseIdx, section = None):
@@ -98,13 +99,27 @@ def get_course_detail(link):
     description = json_items["ns2:course"]["description"]
     description = description[0: description.find("Prerequisite")]
     credit = json_items["ns2:course"]["creditHours"]
-    courseSectionInformation = json_items["ns2:course"]["courseSectionInformation"]
-    genEdCategories = json_items["ns2:course"]
+    courseSectionInformation = readable_subject(json_items["ns2:course"]["courseSectionInformation"])
+    try:
+        genEdCategories = json_items["ns2:course"]["sectionDegreeAttributes"]
+    except:
+        genEdCategories = None
+
+    dict["course_title"] = course_title
+    dict["description"] = description
+    dict["credit"] = credit
+    dict["courseSectionInformation"] = courseSectionInformation
+    dict["genEdCategories"] = genEdCategories
+    return dict
+
+
+def readable_subject(string):
+    for str in unreadable_subjects_title:
+        if str in string:
+            string = string.replace(str, '.'.join(str))
+    return string
 
 #########################  ADVANCED FEATURE  ##################################
-def get_num_lecture(link):
-    return 0
-
 def get_lecture_sections():
     lec_sections = []
     return lec_sections

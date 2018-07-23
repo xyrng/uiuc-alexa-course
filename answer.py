@@ -39,7 +39,7 @@ def answer_class_details():
 
     session.attributes = {}
 
-    answer_msg = render_template('answer-section-details',
+    answer_msg = render_template('answer-lec-section-details',
                                  course_title=course_title, start_date=start_date,
                                  end_date=end_date, start_time=start_time, end_time=end_time,
                                  days_of_week=days_of_week, professor=professor, location=location, crn=crn)
@@ -62,7 +62,8 @@ def answer_course_details():
     genEdCategories = result_dict['genEdCategories']
 
 
-    answer_msg = render_template('answer-course-details',
+    #TODO: answer-course-details template
+    answer_msg = render_template('answer-course-details', subject=subject, course_num=course_num,
                                  course_title=course_title, description=description, credit=credit,
                                  courseSectionInformation=courseSectionInformation, genEdCategories=genEdCategories)
     return question(answer_msg)

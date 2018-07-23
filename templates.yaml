@@ -4,11 +4,14 @@ ask-semester: Sure! Then, please tell me which semester you want. For example, y
 
 ask-course: Please tell me which course you want.
 
-ask-section: Okay. Here are the sections of {{ subject }} {{course_num}}, {{sections | join(", ")}}. Which one do you want?
+ask-course-details: Do you want course description? If yes, please say "course description". If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
 
-answer-section-details: Here are the details about the {{ course }} of {{ semester }} semester in {{ year }}.. Course title, {{ course_title}}, and is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. You may "stop" to end this session, or say a year to start a new one.
+answer-course-details: Here the the course detail of {{subject}} {{course_num}}, {{course_title}}. This course is about {{description}}. The credit hour of this course is {{credit}}. {{courseSectionInformation}}. {% if not genEdCategories == None %} It meets the general education of {{genEdCategories}}; {% endif %}. If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
 
-answer-course-details: Here
+ask-section: Okay. {% if combine_section == True %} For this course, Students must register for one lecture discussion section and one lecture section; {% endif %} Here are the lecture sections of {{ subject }} {{course_num}}, {{sections | join(", ")}}. Which one do you want?
+
+answer-lec-section-details: Here are the details about the {{section}} section of {{ subject }} {{course_num}} of {{ semester }} semester in {{ year }}.. Course title, {{ course_title}}, and is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. You may "stop" to end this session, or say a year to start a new one.
+ {% if combine_section == True %} if you want to know lab section, please say "lab section". Or, say "restart" to start a new session. Say "cancel" to stop. ;{% endif%}
 
 error-not-found: I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session.
 
