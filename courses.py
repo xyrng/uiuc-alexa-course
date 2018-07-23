@@ -7,7 +7,7 @@ from parse import parse
 course_url = "https://courses.illinois.edu/cisapp/explorer/schedule"
 
 unreadable_subjects_title = {"CS", "ECE"}
-unreadable_section_title = {"AL1", "AL2", }
+unreadable_section_title = {'AL1', 'AL2', 'AYA', 'AYB', 'AYC', 'AYD', 'AYE', 'AYF', 'AYG', 'AYH', 'AYI', 'AYJ', 'AYK', 'AYL'}
 
 #########################  BASIC FEATURE  ##################################
 def make_prelink(year, semester, subject, courseIdx, section = None):
@@ -55,8 +55,13 @@ def get_days_of_week(days):
 
 def get_professors(prof):
     list_of_prof = []
-    for item in prof["instructor"]:
-        name = "Professor " + item['@lastName']
+    professors = prof["instructor"]
+    if type(professors) == list:
+        for item in professors:
+            name = "Professor " + item['@lastName']
+            list_of_prof.append(name)
+    else:
+        name = "Professor " + prof["instructor"]['@lastName']
         list_of_prof.append(name)
     return list_of_prof
 
@@ -112,6 +117,14 @@ def get_course_detail(link):
     dict["genEdCategories"] = genEdCategories
     return dict
 
+def get_diss_detail(link):
+    dict = {}
+    url = link + ".xml"
+    jsonString = parse(url)
+    json_items = json.loads(jsonString)
+
+
+
 
 def readable_subject(string):
     for str in unreadable_subjects_title:
@@ -120,13 +133,60 @@ def readable_subject(string):
     return string
 
 #########################  ADVANCED FEATURE  ##################################
-def get_lecture_sections():
+def get_lectures(link):
     lec_sections = []
+    url = link + ".xml"
+    jsonString = parse(url)
+    json_items = json.loads(jsonString)
+    sections = json_items["ns2:course"]["sections"]["section"]
+    if type(sections) == list:
+        for sec in json_items["ns2:course"]["sections"]["section"]:
+            url = sec["@href"]
+            if is_lecture(url):
+                lec_sections.append(sec["#text"])
     return lec_sections
 
-def get_num_discussion(link):
-    return 0;
+def get_discussions(link):
+    dis_sections = []
+    url = link + ".xml"
+    jsonString = parse(url)
+    json_items = json.loads(jsonString)
+    sections = json_items["ns2:course"]["sections"]["section"]
+    if type(sections) == list:
+        for sec in json_items["ns2:course"]["sections"]["section"]:
+            url = sec["@href"]
+            if not is_lecture(url):
+                dis_sections.append(sec["#text"])
+    return dis_sections
 
 def get_discussion_sections(lect, link):
     dis_sections = []
     return dis_sections;
+
+def combine_course(link):
+    url = link + ".xml"
+    jsonString = parse(url)
+    json_items = json.loads(jsonString)
+    if 'classScheduleInformation' in json_items["ns2:course"].keys():
+        return True
+    return False
+
+def is_lecture(link):
+    jsonString = parse(link)
+    json_items = json.loads(jsonString)
+    meetings = json_items["ns2:section"]["meetings"]["meeting"]
+    if type(meetings) == list:
+        for m in meetings:
+            if m["type"]["#text"] == "Lecture":
+                return True
+    else:
+        if meetings["type"]["#text"] == "Lecture":
+            return True
+    return False
+
+def readable_section(sec_list):
+    temp = []
+    for sec in sec_list:
+        if sec in unreadable_section_title:
+            temp.append(sec.replace(sec, '.'.join(sec)))
+    return temp

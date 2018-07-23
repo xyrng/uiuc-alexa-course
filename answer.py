@@ -27,6 +27,7 @@ def answer_class_details():
     crn = get_crn(link, section)
     link = make_link(link, crn)
     result_dict = get_lecture_detail(link)
+    combine_course = session.attributes["combine_course"]
 
     course_title    =       result_dict['course_title']
     start_date      =       result_dict['start_date']
@@ -38,12 +39,27 @@ def answer_class_details():
     location        =       result_dict['location']
 
     session.attributes = {}
-
-    answer_msg = render_template('answer-lec-section-details',
+    print("I reach here! \n")
+    answer_msg = render_template('answer-lec-section-details', section=section, semester=semester, year=year,
                                  course_title=course_title, start_date=start_date,
                                  end_date=end_date, start_time=start_time, end_time=end_time,
-                                 days_of_week=days_of_week, professor=professor, location=location, crn=crn)
+                                 days_of_week=days_of_week, professor=professor, location=location, combine_course=combine_course)
     return question(answer_msg)
+
+def answer_dis_details():
+    year = session.attributes['year']
+    semester = session.attributes['semester']
+    subject = session.attributes['subject']
+    course_num = session.attributes['course_num']
+    section = session.attributes['section']
+    link = make_prelink(year, semester, subject, course_num)
+    crn = get_crn(link, section)
+    link = make_link(link, crn)
+    result_dict = get_diss_detail(link)
+
+
+
+    return
 
 
 def answer_course_details():

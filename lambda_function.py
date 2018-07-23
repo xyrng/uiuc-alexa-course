@@ -6,9 +6,7 @@ from flask_ask import Ask, statement, question, session, request
 from answer import answer_class_details
 from answer import answer_course_details
 
-from courses import make_prelink
-from courses import get_sections
-
+from courses import *
 
 app = Flask(__name__)
 ask = Ask(app, '/')
@@ -127,6 +125,7 @@ def answer_course_name(subject, course_num):
 @ask.intent("AnswerCourseDescriptionIntent")
 def answer_course_des():
     try:
+        session.attributes['course_dscpt'] = True
         return answer_course_details()
     except KeyError:
         err_msg = render_template("error-not-understand")
@@ -134,13 +133,19 @@ def answer_course_des():
 
 @ask.intent("IntermediateIntent")
 def ask_section():
-
     link = make_prelink(year=session.attributes['year'], semester=session.attributes['semester'], subject=session.attributes['subject'],
                         courseIdx=session.attributes['course_num'])
-    sections = get_sections(link)
-    ask_msg = render_template('ask-section', subject=session.attributes['subject'], course_num=session.attributes['course_num'], sections=sections)
+    session.attributes['combine_course'] = combine_course(link)
+    if session.attributes['combine_course']:
+        sections = get_lectures(link)
+        sections = readable_section(sections)
+    else:
+        sections = get_sections(link)
+        sections = readable_section(sections)
+    ask_msg = render_template('ask-section', combine_course=session.attributes['combine_course'],
+                              subject=session.attributes['subject'],
+                              course_num=session.attributes['course_num'], sections=sections)
     return question(ask_msg)
-
 
 
 # What user says will be section number and I have to find corresponding crn
@@ -151,10 +156,20 @@ def answer_section():
         section = request.intent.slots.section.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['name']
         # store year into session
         session.attributes['section'] = section
+        print("I am here \n")
+        print(session.attributes['combine_course'])
         return answer_class_details()
     except KeyError:
-        err_msg = render_template("error-not-understand")
+        err_msg = render_template("error-other")
         return question(err_msg)
+
+@ask.intent("NeedLabSectionIntent")
+def give_lab_sections():
+    return
+
+@ask.intent("AnswerLabSectionIntent")
+def answer_lab_section():
+    return
 
 
 @ask.intent("RestartIntent")
