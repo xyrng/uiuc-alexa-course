@@ -12,7 +12,11 @@ ask-section: Okay. {% if combine_course == True %} For this course, Students mus
 
 answer-lec-section-details: Here are the details about the {{section}} section of {{ subject }} {{course_num}} of {{ semester }} semester in {{ year }}. Course title, {{ course_title}}, and is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. {% if combine_course == True %} if you want to know lab section, please say "lab section", Or ;{% endif %} , You may "stop" to end this session, or say a year to start a new one.
 
-answer-dis-section-details: abc
+give-dis-sections: Here are the discussion or lab sections of {{section}} section, {{ lab_sections | join(", ") }}, please choose one.
+
+answer-dis-section-details: Here is the {{ dis_type }} of {{ subject }} {{ course_num }}. This section holds from {{start_time}} to {{ end_time }} on each {% if not days_of_week == []%} T {{ days_of_week | join(", ") }}; {% endif %} , and the location is {{ room }} {{ location }}. You may say "restart" to start a new session. Or say "cancel" to stop.
+
+answer-dis-section-details1: There are two lab or discussion sections of {{ subject }} {{course_num}}. The first one is {{dis_type}}. This section holds from {{start_time}} to {{ end_time }} on each {% if not days_of_week == []%} T {{ days_of_week | join(", ") }}; {% endif %} , and the location is {{ room }} {{ location }}. The second one is {{dis_type1}}. This section holds from {{ start_time1 }} to {{ end_time1 }} on each {% if not days_of_week1 == []%} T {{ days_of_week1 | join(", ") }}; {% endif %} , and the location is {{ room1 }} {{ location1 }}. You may say "restart" to start a new session. Or say "cancel" to stop.
 
 restart: Sure, please tell me the year you want. Don't forget to add year before or after.
 

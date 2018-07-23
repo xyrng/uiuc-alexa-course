@@ -3,9 +3,7 @@ from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
 
-from answer import answer_class_details
-from answer import answer_course_details
-
+from answer import *
 from courses import *
 
 app = Flask(__name__)
@@ -142,6 +140,7 @@ def ask_section():
     else:
         sections = get_sections(link)
         sections = readable_section(sections)
+
     ask_msg = render_template('ask-section', combine_course=session.attributes['combine_course'],
                               subject=session.attributes['subject'],
                               course_num=session.attributes['course_num'], sections=sections)
@@ -156,8 +155,8 @@ def answer_section():
         section = request.intent.slots.section.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['name']
         # store year into session
         session.attributes['section'] = section
-        print("I am here \n")
-        print(session.attributes['combine_course'])
+        print("AnswerSectionIntent reach here")
+        print(section)
         return answer_class_details()
     except KeyError:
         err_msg = render_template("error-other")
@@ -165,11 +164,29 @@ def answer_section():
 
 @ask.intent("NeedLabSectionIntent")
 def give_lab_sections():
-    return
+    try:
+        print("I am here \n")
+        section = session.attributes['section']
+        link = make_prelink(year=session.attributes['year'], semester=session.attributes['semester'],
+                            subject=session.attributes['subject'],
+                            courseIdx=session.attributes['course_num'])
+        lab_sections = get_discussions(link, section)
+        ask_msg = render_template('give-dis-sections', section=section, lab_sections=lab_sections)
+        print(lab_sections)
+        return question(ask_msg)
+    except KeyError:
+        err_msg = render_template("error-other")
+        return question(err_msg)
 
 @ask.intent("AnswerLabSectionIntent")
 def answer_lab_section():
-    return
+    try:
+        labsection = request.intent.slots.labsection.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['name']
+        session.attributes['labsection'] = labsection
+        return answer_dis_details()
+    except KeyError:
+        err_msg = render_template("error-other")
+        return question(err_msg)
 
 
 @ask.intent("RestartIntent")

@@ -4,30 +4,20 @@ from courses import *
 import xmltodict
 from urllib.request import urlopen
 
-link = "https://courses.illinois.edu/cisapp/explorer/schedule/2018/fall/CS/241/45300.xml"
+link = "https://courses.illinois.edu/cisapp/explorer/schedule/2018/fall/CS/126/69200.xml"
 f = urlopen(link)
 xmlString = f.read()
 jsonString = json.dumps(xmltodict.parse(xmlString), indent=4)
 json_items = json.loads(jsonString)
-# with open('output.json', 'w') as f:
-#     f.write(jsonString)
+with open('output.json', 'w') as f:
+    f.write(jsonString)
 # print("sections are: ")
 # list = [(lambda x: x["#text"])(x) for x in json_items["ns2:course"]["sections"]["section"]]
 # print(list)
 # print(combine_course(link))
-professor = json_items["ns2:section"]["meetings"]["meeting"]["instructors"]
-print(professor)
-print(get_professors(professor))
-
-link2 = "https://courses.illinois.edu/cisapp/explorer/schedule/2018/fall/CS/225/35919.xml"
-f = urlopen(link2)
-xmlString = f.read()
-jsonString = json.dumps(xmltodict.parse(xmlString), indent=4)
-json_items = json.loads(jsonString)
-
-professor = json_items["ns2:section"]["meetings"]["meeting"]["instructors"]
-print(professor)
-print(get_professors(professor))
+# professor = json_items["ns2:section"]["meetings"]["meeting"]["instructors"]
+# print(professor)
+# print(get_professors(professor))
 
 # def test(a, b, c = 1):
 #     print(a)
@@ -66,3 +56,6 @@ print(get_professors(professor))
 # temp = get_discussions(link)
 # print(temp)
 # print(readable_section(temp))
+
+
+# print(get_days_of_week("T"))

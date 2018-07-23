@@ -25,6 +25,8 @@ def get_sections(link):
     jsonString = parse(url)
     json_items = json.loads(jsonString)
     list = [(lambda x: x["#text"])(x) for x in json_items["ns2:course"]["sections"]["section"]]
+    print("list:")
+    print(list)
     return list
 
 def get_crn(link, section):
@@ -70,19 +72,27 @@ def get_lecture_detail(link):
     url = link + ".xml"
     jsonString = parse(url)
     json_items = json.loads(jsonString)
-
-    course_title = json_items["ns2:section"]["parents"]["course"]["#text"]
-    start_date = json_items["ns2:section"]["startDate"][0:10]
-    end_date = json_items["ns2:section"]["endDate"][0:10]
-    start_time = json_items["ns2:section"]["meetings"]["meeting"]["start"]
-    end_time = json_items["ns2:section"]["meetings"]["meeting"]["end"]
-    days_of_week = json_items["ns2:section"]["meetings"]["meeting"]["daysOfTheWeek"]
-    professor = json_items["ns2:section"]["meetings"]["meeting"]["instructors"]
-    location = json_items["ns2:section"]["meetings"]["meeting"]["buildingName"]
-
-    days_of_week = get_days_of_week(days_of_week)
+    print("222")
+    course = json_items["ns2:section"]
+    course_title = course["parents"]["course"]["#text"]
+    start_date = course["startDate"][0:10]
+    end_date = course["endDate"][0:10]
+    start_time = course["meetings"]["meeting"]["start"]
+    print("nnn")
+    end_time = course["meetings"]["meeting"]["end"]
+    try:
+        print("aaa")
+        days_of_week = course["meetings"]["meeting"]["daysOfTheWeek"]
+        print(days_of_week)
+        days_of_week = get_days_of_week(days_of_week)
+    except KeyError:
+        print("bbb")
+        days_of_week = []
+    professor = course["meetings"]["meeting"]["instructors"]
+    location = course["meetings"]["meeting"]["buildingName"]
+    print("hhh")
     professor = get_professors(professor)
-
+    print("sss")
     dict["course_title"] = course_title
     dict["start_date"] = start_date
     dict["end_date"] = end_date
@@ -92,6 +102,7 @@ def get_lecture_detail(link):
     dict["professor"] = professor
     dict["location"] = location
 
+    print(dict)
     return dict
 
 def get_course_detail(link):
@@ -122,8 +133,58 @@ def get_diss_detail(link):
     url = link + ".xml"
     jsonString = parse(url)
     json_items = json.loads(jsonString)
+    meetings = json_items["ns2:section"]["meetings"]["meeting"]
+    if type(meetings) == list:
+        one_more_dis = True
+        dis_type = meetings[0]["type"]["#text"]
+        start_time = meetings[0]["start"]
+        end_time = meetings[0]["end"]
+        days_of_week = meetings[0]["daysOfTheWeek"]
+        location = meetings[0]["buildingName"]
+        room = meetings[0]["roomNumber"]
+        days_of_week = get_days_of_week(days_of_week)
+        dict["one_more_dis"] = one_more_dis
+        dict["dis_type"] = dis_type
+        dict["start_time"] = start_time
+        dict["end_time"] = end_time
+        dict["days_of_week"] = days_of_week
+        dict["location"] = location
+        dict["room"] = room
 
+        dis_type1 = meetings[1]["type"]["#text"]
+        start_time1 = meetings[1]["start"]
+        end_time1 = meetings[1]["end"]
+        days_of_week1 = meetings[1]["daysOfTheWeek"]
+        location1 = meetings[1]["buildingName"]
+        room1 = meetings[1]["roomNumber"]
+        days_of_week1 = get_days_of_week(days_of_week1)
+        dict["dis_type1"] = dis_type1
+        dict["start_time1"] = start_time1
+        dict["end_time1"] = end_time1
+        dict["days_of_week1"] = days_of_week1
+        dict["location1"] = location1
+        dict["room1"] = room1
 
+        return dict
+
+    else:
+        one_more_dis = False
+        dis_type = meetings["type"]["#text"]
+        start_time = meetings["start"]
+        end_time = meetings["end"]
+        days_of_week = meetings["daysOfTheWeek"]
+        location = meetings["buildingName"]
+        room = meetings["roomNumber"]
+        days_of_week = get_days_of_week(days_of_week)
+        dict["one_more_dis"] = one_more_dis
+        dict["dis_type"] = dis_type
+        dict["start_time"] = start_time
+        dict["end_time"] = end_time
+        dict["days_of_week"] = days_of_week
+        dict["location"] = location
+        dict["room"] = room
+
+    return dict
 
 
 def readable_subject(string):
@@ -146,8 +207,9 @@ def get_lectures(link):
                 lec_sections.append(sec["#text"])
     return lec_sections
 
-def get_discussions(link):
+def get_discussions(link, lect):
     dis_sections = []
+    filter = lect[0]
     url = link + ".xml"
     jsonString = parse(url)
     json_items = json.loads(jsonString)
@@ -156,12 +218,9 @@ def get_discussions(link):
         for sec in json_items["ns2:course"]["sections"]["section"]:
             url = sec["@href"]
             if not is_lecture(url):
-                dis_sections.append(sec["#text"])
+                if sec["#text"][0] == filter:
+                    dis_sections.append(sec["#text"])
     return dis_sections
-
-def get_discussion_sections(lect, link):
-    dis_sections = []
-    return dis_sections;
 
 def combine_course(link):
     url = link + ".xml"
@@ -189,4 +248,6 @@ def readable_section(sec_list):
     for sec in sec_list:
         if sec in unreadable_section_title:
             temp.append(sec.replace(sec, '.'.join(sec)))
+        else:
+            temp.append(sec)
     return temp
