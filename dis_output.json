@@ -1,0 +1,78 @@
+{
+    "ns2:section": {
+        "@xmlns:ns2": "http://rest.cis.illinois.edu",
+        "@id": "63734",
+        "@href": "https://courses.illinois.edu/cisapp/explorer/schedule/2018/fall/CS/233/63734.xml",
+        "parents": {
+            "calendarYear": {
+                "@id": "2018",
+                "@href": "https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml",
+                "#text": "2018"
+            },
+            "term": {
+                "@id": "120188",
+                "@href": "https://courses.illinois.edu/cisapp/explorer/schedule/2018/fall.xml",
+                "#text": "Fall 2018"
+            },
+            "subject": {
+                "@id": "CS",
+                "@href": "https://courses.illinois.edu/cisapp/explorer/schedule/2018/fall/CS.xml",
+                "#text": "Computer Science"
+            },
+            "course": {
+                "@id": "233",
+                "@href": "https://courses.illinois.edu/cisapp/explorer/schedule/2018/fall/CS/233.xml",
+                "#text": "Computer Architecture"
+            }
+        },
+        "sectionNumber": "AYA",
+        "statusCode": "A",
+        "partOfTerm": "1",
+        "sectionStatusCode": "A",
+        "enrollmentStatus": "Closed",
+        "startDate": "2018-08-27-05:00",
+        "endDate": "2018-12-12-06:00",
+        "meetings": {
+            "meeting": [
+                {
+                    "@id": "0",
+                    "type": {
+                        "@code": "DIS",
+                        "#text": "Discussion/Recitation"
+                    },
+                    "start": "10:00 AM",
+                    "end": "10:50 AM",
+                    "daysOfTheWeek": "T",
+                    "roomNumber": "1111",
+                    "buildingName": "Siebel Center for Comp Sci",
+                    "instructors": {
+                        "instructor": {
+                            "@lastName": "Herman",
+                            "@firstName": "G",
+                            "#text": "Herman, G"
+                        }
+                    }
+                },
+                {
+                    "@id": "1",
+                    "type": {
+                        "@code": "LAB",
+                        "#text": "Laboratory"
+                    },
+                    "start": "11:00 AM",
+                    "end": "11:50 AM",
+                    "daysOfTheWeek": "T",
+                    "roomNumber": "0218",
+                    "buildingName": "Siebel Center for Comp Sci",
+                    "instructors": {
+                        "instructor": {
+                            "@lastName": "Herman",
+                            "@firstName": "G",
+                            "#text": "Herman, G"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,29 +1,23 @@
-welcome: Welcome to U.I.U.C alexa course explorer! I am here to provide you the information of specific course you want. Please first tell me the year you want. For example, if you want two thousands and eighteen, please say "year 2018".
+welcome: Welcome to the University of Illinois, Urbana-Champaign Course Explorer Skill! I can provide you the information for any specific courses you might be interested in in fall 2018. To begin, please tell me the subject and course number for the course. Or, for example, you may change the year by saying "year 2017" and change the semester by saying "spring semester".
 
-ask-semester: Sure! Then, please tell me which semester you want. For example, you can say "fall semester" or "semester fall".
+ask-semester: Sure! Which semester are you interested in? For example, you can say "fall semester" or "semester fall".
 
-ask-course: Please tell me which course you want.
+ask-course: What is the subject and course number for the course you are interested in.
 
-ask-course-details: Do you want course description? If yes, please say "course description". If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
+ask-course-descp: Do you want course description? If yes, please say "course description". If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
 
-answer-course-details: Here the the course detail of {{subject}} {{course_num}}, {{course_title}}. This course is about {{description}}. The credit hour of this course is {{credit}}. {{courseSectionInformation}}. {% if not genEdCategories == None %} It meets the general education of {{genEdCategories}}; {% endif %}. If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
+answer-course-details: Here the the course detail of {{subject}} {{course_num}}, {{course_title}}. This course is about {{description}}; The credit hour of this course is {{credit}}; {{courseSectionInformation}}; If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
 
-ask-section: Okay. {% if combine_course == True %} For this course, Students must register for one lecture discussion section and one lecture section; {% endif %} Here are the lecture sections of {{ subject }} {{course_num}}, {{sections | join(" , ")}} . Which one do you want? Please add "section" before or after the section name.
+ask-lect-section: Okay. Here are the lecture sections of {{ subject }} {{course_num}}, {{sections | join(" , ")}} . Which one would you like?
 
-answer-lec-section-details: Here are the details about the {{section}} section of {{ subject }} {{course_num}} of {{ semester }} semester in {{ year }}. Course title, {{ course_title}}, and is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. {% if combine_course == True %} if you want to know lab section, please say "lab section", Or ;{% endif %} , You may "stop" to end this session, or say a year to start a new one.
+answer-lec-section-details: Here are the details for section {{section}} of {{ subject }} {{course_num}} in the {{ semester }} semester of {{ year }}. The course title is {{ course_title}}, and it is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. {% if combine_course == True %} If you are interested in lab or discussion sections, please say "lab" or " discussion section". {% endif %} You may say "stop" to end this session, or provide me a new year to search from.
 
-give-dis-sections: Here are the discussion or lab sections of {{section}} section, {{ lab_sections | join(", ") }}, please choose one.
+restart: Sure, what is the subject and course number for the course you are interested in.
 
-answer-dis-section-details: Here is the {{ dis_type }} of {{ subject }} {{ course_num }}. This section holds from {{start_time}} to {{ end_time }} on each {% if not days_of_week == []%} T {{ days_of_week | join(", ") }}; {% endif %} , and the location is {{ room }} {{ location }}. You may say "restart" to start a new session. Or say "cancel" to stop.
+error-not-found: I'm sorry, but I don't have any information on that. You can try a different query, or  say "stop" to end this session.
 
-answer-dis-section-details1: There are two lab or discussion sections of {{ subject }} {{course_num}}. The first one is {{dis_type}}. This section holds from {{start_time}} to {{ end_time }} on each {% if not days_of_week == []%} T {{ days_of_week | join(", ") }}; {% endif %} , and the location is {{ room }} {{ location }}. The second one is {{dis_type1}}. This section holds from {{ start_time1 }} to {{ end_time1 }} on each {% if not days_of_week1 == []%} T {{ days_of_week1 | join(", ") }}; {% endif %} , and the location is {{ room1 }} {{ location1 }}. You may say "restart" to start a new session. Or say "cancel" to stop.
+error-not-understand: I am sorry that I couldn't understand that. Could you say it again?
 
-restart: Sure, please tell me the year you want. Don't forget to add year before or after.
-
-error-not-found: I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session.
-
-error-not-understand: I am sorry that I couldn't understand you. Could you say it again?
-
-error-other: I am sorry to tell you that something has gone wrong. Please try again.
+error-other: I'm sorry, but I am currently experiencing an error. Please try again.
 
 goodbye: Goodbye.

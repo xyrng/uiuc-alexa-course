@@ -3,3 +3,4 @@ venv/
 __pycache__/
 output.json
 question.txt
+test.py

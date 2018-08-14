@@ -76,6 +76,7 @@
                         }
                     ],
                     "samples": [
+                        "{section}",
                         "{section} section",
                         "section {section}"
                     ]
@@ -150,9 +151,23 @@
                     "name": "section",
                     "values": [
                         {
-                            "id": "ayb",
+                            "id": "sd2",
                             "name": {
-                                "value": "A.Y.B"
+                                "value": "SD2",
+                                "synonyms": [
+                                    "sd2",
+                                    "S.D.2"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sd1",
+                            "name": {
+                                "value": "SD1",
+                                "synonyms": [
+                                    "sd1",
+                                    "S.D.1"
+                                ]
                             }
                         },
                         {
@@ -192,15 +207,33 @@
                     "name": "year",
                     "values": [
                         {
+                            "id": "2017",
+                            "name": {
+                                "value": "2017",
+                                "synonyms": [
+                                    "two thousand and seventeen",
+                                    "2017"
+                                ]
+                            }
+                        },
+                        {
                             "id": "2018",
                             "name": {
-                                "value": "2018"
+                                "value": "2018",
+                                "synonyms": [
+                                    "twenty eighteen",
+                                    "two thousand and eighteen",
+                                    "2018"
+                                ]
                             }
                         },
                         {
                             "id": "2019",
                             "name": {
-                                "value": "2019"
+                                "value": "2019",
+                                "synonyms": [
+                                    "2019"
+                                ]
                             }
                         },
                         {
