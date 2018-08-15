@@ -92,6 +92,22 @@ def answer_course_name(subject, course_num):
         # store as course attributes
         course.set_subject(subject)
         course.set_course_num(course_num)
+        print(1)
+        print(course.get_subject())
+        print(course.get_course_num())
+        ask_msg = course.check_subject_validity()
+        if ask_msg is not None:
+            course.set_subject(None)
+            course.set_course_num(None)
+            return question(ask_msg)
+        ask_msg = course.check_course_num_validity()
+        print(2)
+        print(course.get_subject())
+        print(course.get_course_num())
+        if ask_msg is not None:
+            course.set_subject(None)
+            course.set_course_num(None)
+            return question(ask_msg)
         # ask other not answered specs
         ask_msg = course.need_parameter()
         if ask_msg is None:
@@ -114,7 +130,7 @@ def answer_course_des():
 
 @ask.intent("IntermediateIntent")
 def ask_section():
-    combined_course = course.require_combined_section()
+    course.set_lecture_sections()
     #TODO: section template
     ask_msg = render_template('ask-lect-section', subject=course.get_subject(),
                               course_num=course.get_course_num(), sections=course.get_lec_sections())
@@ -129,11 +145,17 @@ def answer_section():
         section = request.intent.slots.section.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['name']
         # store year into session
         course.set_lec_section(section)
-        print(course.get_lect_dict())
+        ask_msg = course.need_parameter()
+        print("AnswerSectionIntent here")
+        if ask_msg is not None:
+            print("ask_msg")
+            return question(ask_msg)
+        print("pass")
+        print("set_lec_section")
         return answer_lec_details(course.get_lect_dict())
     except KeyError:
         err_msg = render_template("error-other")
-        print("lambda")
+
         return question(err_msg)
 
 @ask.intent("RestartIntent")

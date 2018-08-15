@@ -4,13 +4,17 @@ ask-semester: Sure! Which semester are you interested in? For example, you can s
 
 ask-course: What is the subject and course number for the course you are interested in.
 
-ask-course-descp: Do you want course description? If yes, please say "course description". If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
+ask-course-descp: Do you want course description? If yes, please say "course description". If you want to know a section of this course, please say "go on". You may say "restart" to start a new session. Say "cancel" to stop.
 
 answer-course-details: Here the the course detail of {{subject}} {{course_num}}, {{course_title}}. This course is about {{description}}; The credit hour of this course is {{credit}}; {{courseSectionInformation}}; If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
 
 ask-lect-section: Okay. Here are the lecture sections of {{ subject }} {{course_num}}, {{sections | join(" , ")}} . Which one would you like?
 
 answer-lec-section-details: Here are the details for section {{section}} of {{ subject }} {{course_num}} in the {{ semester }} semester of {{ year }}. The course title is {{ course_title}}, and it is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. {% if combine_course == True %} If you are interested in lab or discussion sections, please say "lab" or " discussion section". {% endif %} You may say "stop" to end this session, or provide me a new year to search from.
+
+invalid-subject: Sorry, I don't understand, or I don't have that subject. Please provide new subject and course number.
+
+invalid-course-num: Sorry, {{ subject }} {{ course_num }} doesn't exist. Please provide new subject and course number.
 
 restart: Sure, what is the subject and course number for the course you are interested in.
 

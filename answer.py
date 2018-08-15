@@ -7,7 +7,7 @@ from flask_ask import Ask, statement, question, session, request
 # return a statement / question
 #TODO: unfinished
 def answer_lec_details(lect_dict):
-    print("answer")
+
     year            =       lect_dict['year']
     semester        =       lect_dict['semester']
     subject         =       lect_dict['subject']

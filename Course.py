@@ -17,11 +17,11 @@ class Course:
     # checked
     def __init__(self, year="2018", semester="fall"):
         self.year = year
+        self.link_to_year = self.course_url + "/" + self.year + ".xml"
         self.semester = semester
+        self.link_to_semester = self.course_url + "/" + self.year + "/" + self.semester + ".xml"
         self.combined_course = False
         self.course_description = False
-        self.link_to_year = None
-        self.link_to_semester = None
         self.link_to_subject = None
         self.link_to_course_num = None
         self.link_to_crn = None
@@ -41,7 +41,8 @@ class Course:
     # checked
     def set_year(self, year):
         self.year = year
-        self.make_link_to_year()
+        if year is not None:
+            self.make_link_to_year()
 
     # checked
     def make_link_to_year(self):
@@ -54,7 +55,8 @@ class Course:
     # checked
     def set_semester(self, semester):
         self.semester = semester
-        self.make_link_to_semester()
+        if self.semester is not None:
+            self.make_link_to_semester()
 
     # checked
     def make_link_to_semester(self):
@@ -67,7 +69,9 @@ class Course:
     # checked
     def set_subject(self, subject):
         self.subject = subject
-        self.make_link_to_subject()
+        if self.subject is not None:
+            self.subject = subject.upper()
+            self.make_link_to_subject()
 
     # checked
     def make_link_to_subject(self):
@@ -80,7 +84,8 @@ class Course:
     # checked
     def set_course_num(self, courseNum):
         self.course_num = courseNum
-        self.make_link_to_course_num()
+        if self.course_num is not None:
+            self.make_link_to_course_num()
 
     # checked
     def make_link_to_course_num(self):
@@ -93,8 +98,9 @@ class Course:
     # checked
     def set_lec_section(self, lec_section):
         self.lec_section = lec_section
-        self.make_link_to_crn()
-        self.get_lecture_details()
+        if self.lec_sections is not None:
+            self.make_link_to_crn()
+            self.get_lecture_details()
 
     # checked
     def get_lect_dict(self):
@@ -118,14 +124,9 @@ class Course:
             else:
                 if len(self.lec_sections) == 0:
                     self.set_lecture_sections()
-                # TODO: get lecture sections
                 return render_template('ask-lect-section', combined_course=self.combined_course,
                                        subject=self.subject, course_num=self.course_num,
                                        sections=self.lec_sections)
-        elif self.combined_course is True: # TODO: check here
-            if self.combined_section is None:
-                self.get_combined_sections()
-                return render_template()
         else:
             return None
 
@@ -153,6 +154,7 @@ class Course:
     # checked
     def set_lecture_sections(self):
         json_items = self.get_all_sections()
+        self.lec_sections = []
         if len(self.all_sections) > 1:
             for sec in json_items["ns2:course"]["sections"]["section"]:
                 url = sec["@href"]
@@ -250,7 +252,6 @@ class Course:
     def get_course_detail(self):
         json_string = self.parse(self.link_to_course_num)
         json_items = json.loads(json_string)
-        print(json_items)
         course = json_items["ns2:course"]
         course_title = course["label"]
         description = course["description"]
@@ -271,14 +272,14 @@ class Course:
                 string = string.replace(str, '.'.join(str))
         return string
 
-    def require_combined_section(self):
-        jsonString = self.parse(self.link_to_course_num)
-        json_items = json.loads(jsonString)
-        if 'classScheduleInformation' in json_items["ns2:course"].keys():
-            #TODO: May need to be more specific
-            self.combined_course = True
-        self.set_lecture_sections()
-        return self.combined_course
+    # def require_combined_section(self):
+    #     jsonString = self.parse(self.link_to_course_num)
+    #     json_items = json.loads(jsonString)
+    #     if 'classScheduleInformation' in json_items["ns2:course"].keys():
+    #         #TODO: May need to be more specific
+    #         self.combined_course = True
+    #     self.set_lecture_sections()
+    #     return self.combined_course
 
 
     def readable_section(self, sec_list):
@@ -293,4 +294,20 @@ class Course:
                 temp.append(sec)
         return temp
 
+    def check_course_num_validity(self):
+        print("self.link_to_subject: {}".format(self.link_to_subject))
+        jsonString = self.parse(self.link_to_subject)
+        json_items = json.loads(jsonString)
+        for item in json_items['ns2:subject']['courses']['course']:
+            if item['@id'] == self.course_num:
+                return None
+        return render_template('invalid-course-num', subject=self.subject, course_num=self.course_num)
+
+    def check_subject_validity(self):
+        jsonString = self.parse(self.link_to_semester)
+        json_items = json.loads(jsonString)
+        for item in json_items['ns2:term']['subjects']['subject']:
+            if item['@id'].lower() == self.subject.lower():
+                return None
+        return render_template('invalid-subject')
 

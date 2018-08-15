@@ -104,12 +104,1833 @@
                     "name": "subject",
                     "values": [
                         {
+                            "id": "aas",
+                            "name": {
+                                "value": "AAS",
+                                "synonyms": [
+                                    "Asian American Studies",
+                                    "a.a.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "abe",
+                            "name": {
+                                "value": "ABE",
+                                "synonyms": [
+                                    "Agricultural and Biological Engineering",
+                                    "a.b.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "accy",
+                            "name": {
+                                "value": "ACCY",
+                                "synonyms": [
+                                    "Accountancy",
+                                    "a.c.c.y"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ace",
+                            "name": {
+                                "value": "ACE",
+                                "synonyms": [
+                                    "Agricultural and Consumer Economics",
+                                    "a.c.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "aces",
+                            "name": {
+                                "value": "ACES",
+                                "synonyms": [
+                                    "Agricultural, Consumer and Environmental Sciences",
+                                    "a.c.e.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "adv",
+                            "name": {
+                                "value": "ADV",
+                                "synonyms": [
+                                    "Advertising",
+                                    "a.d.v"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ae",
+                            "name": {
+                                "value": "AE",
+                                "synonyms": [
+                                    "Aerospace Engineering",
+                                    "a.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "afas",
+                            "name": {
+                                "value": "AFAS",
+                                "synonyms": [
+                                    "Air Force Aerospace Studies",
+                                    "a.f.a.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "afro",
+                            "name": {
+                                "value": "AFRO",
+                                "synonyms": [
+                                    "African American Studies",
+                                    "a.f.r.o"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "afst",
+                            "name": {
+                                "value": "AFST",
+                                "synonyms": [
+                                    "African Studies",
+                                    "a.f.s.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "agcm",
+                            "name": {
+                                "value": "AGCM",
+                                "synonyms": [
+                                    "Agricultural Communications",
+                                    "a.g.c.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "aged",
+                            "name": {
+                                "value": "AGED",
+                                "synonyms": [
+                                    "Agricultural Education",
+                                    "a.g.e.d"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ahs",
+                            "name": {
+                                "value": "AHS",
+                                "synonyms": [
+                                    "Applied Health Sciences Courses",
+                                    "a.h.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ais",
+                            "name": {
+                                "value": "AIS",
+                                "synonyms": [
+                                    "American Indian Studies",
+                                    "a.i.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ansc",
+                            "name": {
+                                "value": "ANSC",
+                                "synonyms": [
+                                    "Animal Sciences",
+                                    "a.n.s.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "anth",
+                            "name": {
+                                "value": "ANTH",
+                                "synonyms": [
+                                    "Anthropology",
+                                    "a.n.t.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "arab",
+                            "name": {
+                                "value": "ARAB",
+                                "synonyms": [
+                                    "Arabic",
+                                    "a.r.a.b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "arch",
+                            "name": {
+                                "value": "ARCH",
+                                "synonyms": [
+                                    "Architecture",
+                                    "a.r.c.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "art",
+                            "name": {
+                                "value": "ART",
+                                "synonyms": [
+                                    "Art",
+                                    "a.r.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "artd",
+                            "name": {
+                                "value": "ARTD",
+                                "synonyms": [
+                                    "Art--Design",
+                                    "a.r.t.d"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "arte",
+                            "name": {
+                                "value": "ARTE",
+                                "synonyms": [
+                                    "Art--Education",
+                                    "a.r.t.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "artf",
+                            "name": {
+                                "value": "ARTF",
+                                "synonyms": [
+                                    "Art--Foundation",
+                                    "a.r.t.f"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "arth",
+                            "name": {
+                                "value": "ARTH",
+                                "synonyms": [
+                                    "Art--History",
+                                    "a.r.t.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "arts",
+                            "name": {
+                                "value": "ARTS",
+                                "synonyms": [
+                                    "Art--Studio",
+                                    "a.r.t.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "asrm",
+                            "name": {
+                                "value": "ASRM",
+                                "synonyms": [
+                                    "Actuarial Science and Risk Management",
+                                    "a.s.r.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "asst",
+                            "name": {
+                                "value": "ASST",
+                                "synonyms": [
+                                    "Asian Studies",
+                                    "a.s.s.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "astr",
+                            "name": {
+                                "value": "ASTR",
+                                "synonyms": [
+                                    "Astronomy",
+                                    "a.s.t.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "atms",
+                            "name": {
+                                "value": "ATMS",
+                                "synonyms": [
+                                    "Atmospheric Sciences",
+                                    "a.t.m.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "badm",
+                            "name": {
+                                "value": "BADM",
+                                "synonyms": [
+                                    "Business Administration",
+                                    "b.a.d.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "bcs",
+                            "name": {
+                                "value": "BCS",
+                                "synonyms": [
+                                    "Bosnian-Croatian-Serbian",
+                                    "b.c.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "bioc",
+                            "name": {
+                                "value": "BIOC",
+                                "synonyms": [
+                                    "Biochemistry",
+                                    "b.i.o.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "bioe",
+                            "name": {
+                                "value": "BIOE",
+                                "synonyms": [
+                                    "Bioengineering",
+                                    "b.i.o.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "biol",
+                            "name": {
+                                "value": "BIOL",
+                                "synonyms": [
+                                    "Biology",
+                                    "b.i.o.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "biop",
+                            "name": {
+                                "value": "BIOP",
+                                "synonyms": [
+                                    "Biophysics",
+                                    "b.i.o.p"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "bse",
+                            "name": {
+                                "value": "BSE",
+                                "synonyms": [
+                                    "Biomedical Sciences and Engineering",
+                                    "b.s.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "btw",
+                            "name": {
+                                "value": "BTW",
+                                "synonyms": [
+                                    "Business and Technical Writing",
+                                    "b.t.w"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "bus",
+                            "name": {
+                                "value": "BUS",
+                                "synonyms": [
+                                    "Business",
+                                    "b.u.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "catl",
+                            "name": {
+                                "value": "CATL",
+                                "synonyms": [
+                                    "Catalan",
+                                    "c.a.t.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cb",
+                            "name": {
+                                "value": "CB",
+                                "synonyms": [
+                                    "Comparative Biosciences",
+                                    "c.b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cdb",
+                            "name": {
+                                "value": "CDB",
+                                "synonyms": [
+                                    "Cell and Developmental Biology",
+                                    "c.d.b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cee",
+                            "name": {
+                                "value": "CEE",
+                                "synonyms": [
+                                    "Civil and Environmental Engineering",
+                                    "c.e.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chbe",
+                            "name": {
+                                "value": "CHBE",
+                                "synonyms": [
+                                    "Chemical and Biomolecular Engineering",
+                                    "c.h.b.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chem",
+                            "name": {
+                                "value": "CHEM",
+                                "synonyms": [
+                                    "Chemistry",
+                                    "c.h.e.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chin",
+                            "name": {
+                                "value": "CHIN",
+                                "synonyms": [
+                                    "Chinese",
+                                    "c.h.i.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chlh",
+                            "name": {
+                                "value": "CHLH",
+                                "synonyms": [
+                                    "Community Health",
+                                    "c.h.l.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chp",
+                            "name": {
+                                "value": "CHP",
+                                "synonyms": [
+                                    "Campus Honors Program Courses",
+                                    "c.h.p"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ci",
+                            "name": {
+                                "value": "CI",
+                                "synonyms": [
+                                    "Curriculum and Instruction",
+                                    "c.i"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cic",
+                            "name": {
+                                "value": "CIC",
+                                "synonyms": [
+                                    "Committee on Inst Cooperation",
+                                    "c.i.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "clcv",
+                            "name": {
+                                "value": "CLCV",
+                                "synonyms": [
+                                    "Classical Civilization",
+                                    "c.l.c.v"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cle",
+                            "name": {
+                                "value": "CLE",
+                                "synonyms": [
+                                    "Clinical Sciences and Engineering",
+                                    "c.l.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cmn",
+                            "name": {
+                                "value": "CMN",
+                                "synonyms": [
+                                    "Communication",
+                                    "c.m.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cpsc",
+                            "name": {
+                                "value": "CPSC",
+                                "synonyms": [
+                                    "Crop Sciences",
+                                    "c.p.s.c"
+                                ]
+                            }
+                        },
+                        {
                             "id": "cs",
                             "name": {
                                 "value": "CS",
                                 "synonyms": [
                                     "Computer Science",
-                                    "C.S."
+                                    "c.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cse",
+                            "name": {
+                                "value": "CSE",
+                                "synonyms": [
+                                    "Computational Science and Engineering",
+                                    "c.s.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cw",
+                            "name": {
+                                "value": "CW",
+                                "synonyms": [
+                                    "Creative Writing",
+                                    "c.w"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cwl",
+                            "name": {
+                                "value": "CWL",
+                                "synonyms": [
+                                    "Comparative and World Literature",
+                                    "c.w.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "czch",
+                            "name": {
+                                "value": "CZCH",
+                                "synonyms": [
+                                    "Czech",
+                                    "c.z.c.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "danc",
+                            "name": {
+                                "value": "DANC",
+                                "synonyms": [
+                                    "Dance",
+                                    "d.a.n.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ealc",
+                            "name": {
+                                "value": "EALC",
+                                "synonyms": [
+                                    "East Asian Language and Culture",
+                                    "e.a.l.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ece",
+                            "name": {
+                                "value": "ECE",
+                                "synonyms": [
+                                    "Electrical and Computer Engineering",
+                                    "e.c.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "econ",
+                            "name": {
+                                "value": "ECON",
+                                "synonyms": [
+                                    "Economics",
+                                    "e.c.o.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "edpr",
+                            "name": {
+                                "value": "EDPR",
+                                "synonyms": [
+                                    "Educational Practice",
+                                    "e.d.p.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "educ",
+                            "name": {
+                                "value": "EDUC",
+                                "synonyms": [
+                                    "Education",
+                                    "e.d.u.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eil",
+                            "name": {
+                                "value": "EIL",
+                                "synonyms": [
+                                    "English as an International Language",
+                                    "e.i.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eng",
+                            "name": {
+                                "value": "ENG",
+                                "synonyms": [
+                                    "Engineering",
+                                    "e.n.g"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "engh",
+                            "name": {
+                                "value": "ENGH",
+                                "synonyms": [
+                                    "Engineering Honors",
+                                    "e.n.g.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "engl",
+                            "name": {
+                                "value": "ENGL",
+                                "synonyms": [
+                                    "English",
+                                    "e.n.g.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ensu",
+                            "name": {
+                                "value": "ENSU",
+                                "synonyms": [
+                                    "Environmental Sustainability",
+                                    "e.n.s.u"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ent",
+                            "name": {
+                                "value": "ENT",
+                                "synonyms": [
+                                    "Entomology",
+                                    "e.n.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "envs",
+                            "name": {
+                                "value": "ENVS",
+                                "synonyms": [
+                                    "Environmental Studies",
+                                    "e.n.v.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eol",
+                            "name": {
+                                "value": "EOL",
+                                "synonyms": [
+                                    "Educational Organization and Leadership",
+                                    "e.o.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "epol",
+                            "name": {
+                                "value": "EPOL",
+                                "synonyms": [
+                                    "Education Policy, Organization and Leadership",
+                                    "e.p.o.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eps",
+                            "name": {
+                                "value": "EPS",
+                                "synonyms": [
+                                    "Educational Policy Studies",
+                                    "e.p.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "epsy",
+                            "name": {
+                                "value": "EPSY",
+                                "synonyms": [
+                                    "Educational Psychology",
+                                    "e.p.s.y"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ese",
+                            "name": {
+                                "value": "ESE",
+                                "synonyms": [
+                                    "Earth, Society, and Environment",
+                                    "e.s.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "esl",
+                            "name": {
+                                "value": "ESL",
+                                "synonyms": [
+                                    "English as a Second Language",
+                                    "e.s.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "euro",
+                            "name": {
+                                "value": "EURO",
+                                "synonyms": [
+                                    "European Union Studies",
+                                    "e.u.r.o"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "faa",
+                            "name": {
+                                "value": "FAA",
+                                "synonyms": [
+                                    "Fine and Applied Arts",
+                                    "f.a.a"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fin",
+                            "name": {
+                                "value": "FIN",
+                                "synonyms": [
+                                    "Finance",
+                                    "f.i.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "flte",
+                            "name": {
+                                "value": "FLTE",
+                                "synonyms": [
+                                    "Foreign Language Teacher Education",
+                                    "f.l.t.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fr",
+                            "name": {
+                                "value": "FR",
+                                "synonyms": [
+                                    "French",
+                                    "f.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fshn",
+                            "name": {
+                                "value": "FSHN",
+                                "synonyms": [
+                                    "Food Science and Human Nutrition",
+                                    "f.s.h.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "gc",
+                            "name": {
+                                "value": "GC",
+                                "synonyms": [
+                                    "Graduate College",
+                                    "g.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "gcl",
+                            "name": {
+                                "value": "GCL",
+                                "synonyms": [
+                                    "Grand Challenge Learning",
+                                    "g.c.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "geog",
+                            "name": {
+                                "value": "GEOG",
+                                "synonyms": [
+                                    "Geography",
+                                    "g.e.o.g"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "geol",
+                            "name": {
+                                "value": "GEOL",
+                                "synonyms": [
+                                    "Geology",
+                                    "g.e.o.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ger",
+                            "name": {
+                                "value": "GER",
+                                "synonyms": [
+                                    "German",
+                                    "g.e.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "glbl",
+                            "name": {
+                                "value": "GLBL",
+                                "synonyms": [
+                                    "Global Studies",
+                                    "g.l.b.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "gmc",
+                            "name": {
+                                "value": "GMC",
+                                "synonyms": [
+                                    "Germanic",
+                                    "g.m.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "grk",
+                            "name": {
+                                "value": "GRK",
+                                "synonyms": [
+                                    "Greek",
+                                    "g.r.k"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "grkm",
+                            "name": {
+                                "value": "GRKM",
+                                "synonyms": [
+                                    "Modern Greek",
+                                    "g.r.k.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "gs",
+                            "name": {
+                                "value": "GS",
+                                "synonyms": [
+                                    "General Studies",
+                                    "g.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "gws",
+                            "name": {
+                                "value": "GWS",
+                                "synonyms": [
+                                    "Gender and Women's Studies",
+                                    "g.w.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hdfs",
+                            "name": {
+                                "value": "HDFS",
+                                "synonyms": [
+                                    "Human Development and Family Studies",
+                                    "h.d.f.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hebr",
+                            "name": {
+                                "value": "HEBR",
+                                "synonyms": [
+                                    "Hebrew, Modern and Classical",
+                                    "h.e.b.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hist",
+                            "name": {
+                                "value": "HIST",
+                                "synonyms": [
+                                    "History",
+                                    "h.i.s.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hndi",
+                            "name": {
+                                "value": "HNDI",
+                                "synonyms": [
+                                    "Hindi",
+                                    "h.n.d.i"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hort",
+                            "name": {
+                                "value": "HORT",
+                                "synonyms": [
+                                    "Horticulture",
+                                    "h.o.r.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hrd",
+                            "name": {
+                                "value": "HRD",
+                                "synonyms": [
+                                    "Human Resource Development",
+                                    "h.r.d"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hum",
+                            "name": {
+                                "value": "HUM",
+                                "synonyms": [
+                                    "Humanities Courses",
+                                    "h.u.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ib",
+                            "name": {
+                                "value": "IB",
+                                "synonyms": [
+                                    "Integrative Biology",
+                                    "i.b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ie",
+                            "name": {
+                                "value": "IE",
+                                "synonyms": [
+                                    "Industrial Engineering",
+                                    "i.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ihlt",
+                            "name": {
+                                "value": "IHLT",
+                                "synonyms": [
+                                    "Interdisciplinary Health Science",
+                                    "i.h.l.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "info",
+                            "name": {
+                                "value": "INFO",
+                                "synonyms": [
+                                    "Informatics",
+                                    "i.n.f.o"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "is",
+                            "name": {
+                                "value": "IS",
+                                "synonyms": [
+                                    "Information Sciences",
+                                    "i.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ital",
+                            "name": {
+                                "value": "ITAL",
+                                "synonyms": [
+                                    "Italian",
+                                    "i.t.a.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "japn",
+                            "name": {
+                                "value": "JAPN",
+                                "synonyms": [
+                                    "Japanese",
+                                    "j.a.p.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "jour",
+                            "name": {
+                                "value": "JOUR",
+                                "synonyms": [
+                                    "Journalism",
+                                    "j.o.u.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "js",
+                            "name": {
+                                "value": "JS",
+                                "synonyms": [
+                                    "Jewish Studies",
+                                    "j.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "kin",
+                            "name": {
+                                "value": "KIN",
+                                "synonyms": [
+                                    "Kinesiology",
+                                    "k.i.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "kor",
+                            "name": {
+                                "value": "KOR",
+                                "synonyms": [
+                                    "Korean",
+                                    "k.o.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "la",
+                            "name": {
+                                "value": "LA",
+                                "synonyms": [
+                                    "Landscape Architecture",
+                                    "l.a"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "las",
+                            "name": {
+                                "value": "LAS",
+                                "synonyms": [
+                                    "Liberal Arts and Sciences",
+                                    "l.a.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "last",
+                            "name": {
+                                "value": "LAST",
+                                "synonyms": [
+                                    "Latin American and Caribbean Studies",
+                                    "l.a.s.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "lat",
+                            "name": {
+                                "value": "LAT",
+                                "synonyms": [
+                                    "Latin",
+                                    "l.a.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "law",
+                            "name": {
+                                "value": "LAW",
+                                "synonyms": [
+                                    "Law",
+                                    "l.a.w"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ler",
+                            "name": {
+                                "value": "LER",
+                                "synonyms": [
+                                    "Labor and Employment Relations",
+                                    "l.e.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ling",
+                            "name": {
+                                "value": "LING",
+                                "synonyms": [
+                                    "Linguistics",
+                                    "l.i.n.g"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "lls",
+                            "name": {
+                                "value": "LLS",
+                                "synonyms": [
+                                    "Latina/Latino Studies",
+                                    "l.l.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "macs",
+                            "name": {
+                                "value": "MACS",
+                                "synonyms": [
+                                    "Media and Cinema Studies",
+                                    "m.a.c.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "math",
+                            "name": {
+                                "value": "MATH",
+                                "synonyms": [
+                                    "Mathematics",
+                                    "m.a.t.h",
+                                    "Math"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mba",
+                            "name": {
+                                "value": "MBA",
+                                "synonyms": [
+                                    "Regular MBA Program Administration",
+                                    "m.b.a"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mcb",
+                            "name": {
+                                "value": "MCB",
+                                "synonyms": [
+                                    "Molecular and Cell Biology",
+                                    "m.c.b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mdia",
+                            "name": {
+                                "value": "MDIA",
+                                "synonyms": [
+                                    "Media",
+                                    "m.d.i.a"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mdvl",
+                            "name": {
+                                "value": "MDVL",
+                                "synonyms": [
+                                    "Medieval Studies",
+                                    "m.d.v.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "me",
+                            "name": {
+                                "value": "ME",
+                                "synonyms": [
+                                    "Mechanical Engineering",
+                                    "m.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "micr",
+                            "name": {
+                                "value": "MICR",
+                                "synonyms": [
+                                    "Microbiology",
+                                    "m.i.c.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mils",
+                            "name": {
+                                "value": "MILS",
+                                "synonyms": [
+                                    "Military Science",
+                                    "m.i.l.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mip",
+                            "name": {
+                                "value": "MIP",
+                                "synonyms": [
+                                    "Molecular and Integrative Physiology",
+                                    "m.i.p"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mse",
+                            "name": {
+                                "value": "MSE",
+                                "synonyms": [
+                                    "Materials Science and Engineering",
+                                    "m.s.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mus",
+                            "name": {
+                                "value": "MUS",
+                                "synonyms": [
+                                    "Music",
+                                    "m.u.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "muse",
+                            "name": {
+                                "value": "MUSE",
+                                "synonyms": [
+                                    "Museum Studies",
+                                    "m.u.s.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "neur",
+                            "name": {
+                                "value": "NEUR",
+                                "synonyms": [
+                                    "Neuroscience",
+                                    "n.e.u.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "npre",
+                            "name": {
+                                "value": "NPRE",
+                                "synonyms": [
+                                    "Nuclear, Plasma, and Radiological Engineering",
+                                    "n.p.r.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "nres",
+                            "name": {
+                                "value": "NRES",
+                                "synonyms": [
+                                    "Natural Resources and Environmental Sciences",
+                                    "n.r.e.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ns",
+                            "name": {
+                                "value": "NS",
+                                "synonyms": [
+                                    "Naval Science",
+                                    "n.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "nutr",
+                            "name": {
+                                "value": "NUTR",
+                                "synonyms": [
+                                    "Nutritional Sciences",
+                                    "n.u.t.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "path",
+                            "name": {
+                                "value": "PATH",
+                                "synonyms": [
+                                    "Pathobiology",
+                                    "p.a.t.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "pbio",
+                            "name": {
+                                "value": "PBIO",
+                                "synonyms": [
+                                    "Plant Biology",
+                                    "p.b.i.o"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "pers",
+                            "name": {
+                                "value": "PERS",
+                                "synonyms": [
+                                    "Persian",
+                                    "p.e.r.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "phil",
+                            "name": {
+                                "value": "PHIL",
+                                "synonyms": [
+                                    "Philosophy",
+                                    "p.h.i.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "phys",
+                            "name": {
+                                "value": "PHYS",
+                                "synonyms": [
+                                    "Physics",
+                                    "p.h.y.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "plpa",
+                            "name": {
+                                "value": "PLPA",
+                                "synonyms": [
+                                    "Plant Pathology",
+                                    "p.l.p.a"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "pol",
+                            "name": {
+                                "value": "POL",
+                                "synonyms": [
+                                    "Polish",
+                                    "p.o.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "port",
+                            "name": {
+                                "value": "PORT",
+                                "synonyms": [
+                                    "Portuguese",
+                                    "p.o.r.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ps",
+                            "name": {
+                                "value": "PS",
+                                "synonyms": [
+                                    "Political Science",
+                                    "p.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "psm",
+                            "name": {
+                                "value": "PSM",
+                                "synonyms": [
+                                    "Professional Science Master's Program",
+                                    "p.s.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "psyc",
+                            "name": {
+                                "value": "PSYC",
+                                "synonyms": [
+                                    "Psychology",
+                                    "p.s.y.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rees",
+                            "name": {
+                                "value": "REES",
+                                "synonyms": [
+                                    "Russian, East European and Eurasian Studies",
+                                    "r.e.e.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rehb",
+                            "name": {
+                                "value": "REHB",
+                                "synonyms": [
+                                    "Rehabilitation Counseling",
+                                    "r.e.h.b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rel",
+                            "name": {
+                                "value": "REL",
+                                "synonyms": [
+                                    "Religion",
+                                    "r.e.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rhet",
+                            "name": {
+                                "value": "RHET",
+                                "synonyms": [
+                                    "Rhetoric and Composition",
+                                    "r.h.e.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rsoc",
+                            "name": {
+                                "value": "RSOC",
+                                "synonyms": [
+                                    "Rural Sociology",
+                                    "r.s.o.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rst",
+                            "name": {
+                                "value": "RST",
+                                "synonyms": [
+                                    "Recreation, Sport, and Tourism",
+                                    "r.s.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "russ",
+                            "name": {
+                                "value": "RUSS",
+                                "synonyms": [
+                                    "Russian",
+                                    "r.u.s.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "same",
+                            "name": {
+                                "value": "SAME",
+                                "synonyms": [
+                                    "South Asian and Middle Eastern Studies",
+                                    "s.a.m.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sbc",
+                            "name": {
+                                "value": "SBC",
+                                "synonyms": [
+                                    "Strategic Brand Communication",
+                                    "s.b.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "scan",
+                            "name": {
+                                "value": "SCAN",
+                                "synonyms": [
+                                    "Scandinavian",
+                                    "s.c.a.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "se",
+                            "name": {
+                                "value": "SE",
+                                "synonyms": [
+                                    "Systems Engineering and Design",
+                                    "s.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "shs",
+                            "name": {
+                                "value": "SHS",
+                                "synonyms": [
+                                    "Speech and Hearing Science",
+                                    "s.h.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "slav",
+                            "name": {
+                                "value": "SLAV",
+                                "synonyms": [
+                                    "Slavic",
+                                    "s.l.a.v"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "slcl",
+                            "name": {
+                                "value": "SLCL",
+                                "synonyms": [
+                                    "Literatures, Cultures, and Linguistics",
+                                    "s.l.c.l"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sls",
+                            "name": {
+                                "value": "SLS",
+                                "synonyms": [
+                                    "Second Language Studies",
+                                    "s.l.s"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "soc",
+                            "name": {
+                                "value": "SOC",
+                                "synonyms": [
+                                    "Sociology",
+                                    "s.o.c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "socw",
+                            "name": {
+                                "value": "SOCW",
+                                "synonyms": [
+                                    "Social Work",
+                                    "s.o.c.w"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "span",
+                            "name": {
+                                "value": "SPAN",
+                                "synonyms": [
+                                    "Spanish",
+                                    "s.p.a.n"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sped",
+                            "name": {
+                                "value": "SPED",
+                                "synonyms": [
+                                    "Special Education",
+                                    "s.p.e.d"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "stat",
+                            "name": {
+                                "value": "STAT",
+                                "synonyms": [
+                                    "Statistics",
+                                    "s.t.a.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "swah",
+                            "name": {
+                                "value": "SWAH",
+                                "synonyms": [
+                                    "Swahili",
+                                    "s.w.a.h"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tam",
+                            "name": {
+                                "value": "TAM",
+                                "synonyms": [
+                                    "Theoretical and Applied Mechanics",
+                                    "t.a.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "te",
+                            "name": {
+                                "value": "TE",
+                                "synonyms": [
+                                    "Technology Entrepreneurship",
+                                    "t.e"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "thea",
+                            "name": {
+                                "value": "THEA",
+                                "synonyms": [
+                                    "Theatre",
+                                    "t.h.e.a"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tmgt",
+                            "name": {
+                                "value": "TMGT",
+                                "synonyms": [
+                                    "Technology and Management Courses",
+                                    "t.m.g.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "trst",
+                            "name": {
+                                "value": "TRST",
+                                "synonyms": [
+                                    "Translation Studies",
+                                    "t.r.s.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tsm",
+                            "name": {
+                                "value": "TSM",
+                                "synonyms": [
+                                    "Technical Systems Management",
+                                    "t.s.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "turk",
+                            "name": {
+                                "value": "TURK",
+                                "synonyms": [
+                                    "Turkish",
+                                    "t.u.r.k"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ukr",
+                            "name": {
+                                "value": "UKR",
+                                "synonyms": [
+                                    "Ukrainian",
+                                    "u.k.r"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "up",
+                            "name": {
+                                "value": "UP",
+                                "synonyms": [
+                                    "Urban and Regional Planning",
+                                    "u.p"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "vcm",
+                            "name": {
+                                "value": "VCM",
+                                "synonyms": [
+                                    "Veterinary Clinical Medicine",
+                                    "v.c.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "vm",
+                            "name": {
+                                "value": "VM",
+                                "synonyms": [
+                                    "Veterinary Medicine Courses",
+                                    "v.m"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "wlof",
+                            "name": {
+                                "value": "WLOF",
+                                "synonyms": [
+                                    "Wolof",
+                                    "w.l.o.f"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "writ",
+                            "name": {
+                                "value": "WRIT",
+                                "synonyms": [
+                                    "Writing Studies",
+                                    "w.r.i.t"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ydsh",
+                            "name": {
+                                "value": "YDSH",
+                                "synonyms": [
+                                    "Yiddish",
+                                    "y.d.s.h"
                                 ]
                             }
                         }
