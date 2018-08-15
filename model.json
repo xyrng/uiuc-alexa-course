@@ -24,10 +24,13 @@
                     "slots": [
                         {
                             "name": "year",
-                            "type": "year"
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
                         }
                     ],
                     "samples": [
+                        "set year as {year}",
+                        "change year to {year}",
+                        "{year}",
                         "year {year}"
                     ]
                 },
@@ -40,6 +43,9 @@
                         }
                     ],
                     "samples": [
+                        "set semester as {semester}",
+                        "change semester to {semester}",
+                        "{semester}",
                         "semester {semester}",
                         "{semester} semester"
                     ]
@@ -61,27 +67,6 @@
                     ]
                 },
                 {
-                    "name": "AnswerCourseDescriptionIntent",
-                    "slots": [],
-                    "samples": [
-                        "course description"
-                    ]
-                },
-                {
-                    "name": "AnswerSectionIntent",
-                    "slots": [
-                        {
-                            "name": "section",
-                            "type": "section"
-                        }
-                    ],
-                    "samples": [
-                        "{section}",
-                        "{section} section",
-                        "section {section}"
-                    ]
-                },
-                {
                     "name": "RestartIntent",
                     "slots": [],
                     "samples": [
@@ -92,10 +77,10 @@
                     ]
                 },
                 {
-                    "name": "IntermediateIntent",
+                    "name": "AnswerDescriptionIntent",
                     "slots": [],
                     "samples": [
-                        "go on"
+                        "description"
                     ]
                 }
             ],
@@ -1309,8 +1294,7 @@
                                 "value": "MATH",
                                 "synonyms": [
                                     "Mathematics",
-                                    "m.a.t.h",
-                                    "Math"
+                                    "m.a.t.h"
                                 ]
                             }
                         },
@@ -1964,103 +1948,6 @@
                             "id": "spring",
                             "name": {
                                 "value": "Spring"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "section",
-                    "values": [
-                        {
-                            "id": "sd2",
-                            "name": {
-                                "value": "SD2",
-                                "synonyms": [
-                                    "sd2",
-                                    "S.D.2"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "sd1",
-                            "name": {
-                                "value": "SD1",
-                                "synonyms": [
-                                    "sd1",
-                                    "S.D.1"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "a",
-                            "name": {
-                                "value": "B"
-                            }
-                        },
-                        {
-                            "id": "b",
-                            "name": {
-                                "value": "A"
-                            }
-                        },
-                        {
-                            "id": "al2",
-                            "name": {
-                                "value": "AL2",
-                                "synonyms": [
-                                    "A.L.2"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "al1",
-                            "name": {
-                                "value": "AL1",
-                                "synonyms": [
-                                    "al1",
-                                    "A.L.1"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "year",
-                    "values": [
-                        {
-                            "id": "2017",
-                            "name": {
-                                "value": "2017",
-                                "synonyms": [
-                                    "two thousand and seventeen",
-                                    "2017"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "2018",
-                            "name": {
-                                "value": "2018",
-                                "synonyms": [
-                                    "twenty eighteen",
-                                    "two thousand and eighteen",
-                                    "2018"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "2019",
-                            "name": {
-                                "value": "2019",
-                                "synonyms": [
-                                    "2019"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "2004",
-                            "name": {
-                                "value": "2004"
                             }
                         }
                     ]
