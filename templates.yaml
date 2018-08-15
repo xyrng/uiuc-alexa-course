@@ -1,20 +1,28 @@
+hello: hello!
+
 welcome: Welcome to the University of Illinois, Urbana-Champaign Course Explorer Skill! I can provide you the information for any specific courses you might be interested in in fall 2018. To begin, please tell me the subject and course number for the course. Or, for example, you may change the year by saying "year 2017" and change the semester by saying "spring semester".
 
-ask-semester: Sure! Which semester are you interested in? For example, you can say "fall semester" or "semester fall".
+ask-year: Sure! Which year are you interested in?
 
-ask-course: What is the subject and course number for the course you are interested in.
+ask-semester: Sure! The year is set as {{year}}. Which semester are you interested in?
 
-ask-course-descp: Do you want course description? If yes, please say "course description". If you want to know a section of this course, please say "go on". You may say "restart" to start a new session. Say "cancel" to stop.
+ask-course: Sure, the semester is {{semester}} {{year}}. What is the subject and course number for the course you are interested in.
 
-answer-course-details: Here the the course detail of {{subject}} {{course_num}}, {{course_title}}. This course is about {{description}}; The credit hour of this course is {{credit}}; {{courseSectionInformation}}; If you want to know a section of this course, please say "go on". Say "restart" to start a new session. Say "cancel" to stop.
+ask-course-descp: Sure! It's {{subject}} {{course_num}} in {{year}} {{semester}}. You may say "description" for course description. You are also able to change your request or you may say "restart" to start a new session.
 
-ask-lect-section: Okay. Here are the lecture sections of {{ subject }} {{course_num}}, {{sections | join(" , ")}} . Which one would you like?
+answer-course-detailed-descp: Here the description of {{subject}} {{course_num}}, {{course_title}}. The credit hour of this course is {{credit}}. This course is about {{description}}; {% if prerequisite != None %} {{ prerequisite }}; {% endif %} You can change your request or say "restart" to start a new session.
 
-answer-lec-section-details: Here are the details for section {{section}} of {{ subject }} {{course_num}} in the {{ semester }} semester of {{ year }}. The course title is {{ course_title}}, and it is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. {% if combine_course == True %} If you are interested in lab or discussion sections, please say "lab" or " discussion section". {% endif %} You may say "stop" to end this session, or provide me a new year to search from.
+invalid-year: Sorry, we only have courses from 2004 to 2019. By default, the semester, for now, is Fall 2018. Please give me a new year, or you can provide me the subject and course number you are interested in.
+
+invalid-semester: Sorry, we still don't have {{semester}} semester in {{year}}. By default, the semester, for now, is Spring 2019. Please give me a new semester, or you can provide me the subject and course number you are interested in.
 
 invalid-subject: Sorry, I don't understand, or I don't have that subject. Please provide new subject and course number.
 
-invalid-course-num: Sorry, {{ subject }} {{ course_num }} doesn't exist. Please provide new subject and course number.
+none-subject: Sorry, you haven't provide me a subject. Please give me the subject and course number.
+
+invalid-course-num: Sorry, {{ subject }} {{ course_num }} doesn't exist or it is not offerred in {{semester}} {{year}}. Please provide new subject and course number.
+
+none-course-num: Sorry, you haven't provide me a course number. Please give me the subject and course number.
 
 restart: Sure, what is the subject and course number for the course you are interested in.
 
